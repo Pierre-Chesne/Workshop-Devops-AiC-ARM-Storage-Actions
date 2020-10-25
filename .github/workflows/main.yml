@@ -20,7 +20,7 @@ jobs:
       with:
         azcliversion: 2.9.0
         inlineScript: |
-          az group create --name RG-GitHub-Demo --location eastus2
+          az group create --name ${{ secrets.AZURE_RG }} --location ${{ secrets.AZURE_LOCATION }}
 
     - name: Git - Recupération des sources
       uses: actions/checkout@master
