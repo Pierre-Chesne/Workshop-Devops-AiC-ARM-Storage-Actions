@@ -36,7 +36,7 @@ jobs:
     - name: Azure - Deploy ARM Template
       uses: Azure/github-actions/arm@master
       env:
-        AZURE_RESOURCE_GROUP: RG-GitHub-Demo
+        AZURE_RESOURCE_GROUP: ${{ secrets.AZURE_RG }}
         AZURE_TEMPLATE_LOCATION: ./ARM/azuredeploy.json
         AZURE_TEMPLATE_PARAM_LOCATION: ./ARM/azuredeploy.parameters.json
         
